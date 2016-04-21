@@ -51,7 +51,7 @@ class ShellTask(Task):
 
 class LoadBuildbotInfoFile(Task):
     def __init__(self, context):
-        Task.__init__(self, context, 'LoadBuildbotInfoFile')
+        Task.__init__(self, context, self.__class__.__name__)
 
     def _DoTask(self):
         pf = open(self.context.buildbot_path + config.BUILDBOT_INFO_FILE)
@@ -72,7 +72,7 @@ class LoadBuildbotInfoFile(Task):
 
 class UpdBuildbotInfoFile(Task):
     def __init__(self, context):
-        Task.__init__(self, context, 'UpdBuildbotInfoFile')
+        Task.__init__(self, context, self.__class__.__name__)
 
     def _DoTask(self):
         lines = []
@@ -86,7 +86,7 @@ class UpdBuildbotInfoFile(Task):
 
 class GetCurRev(Task):
     def __init__(self, context):
-        Task.__init__(self, context, 'GetCurRev')
+        Task.__init__(self, context, self.__class__.__name__)
 
     def _DoTask(self):
         if self.context.cur_rev <= 0:
@@ -98,7 +98,7 @@ class GetCurRev(Task):
 
 class UpdateSvn(Task):
     def __init__(self, context):
-        Task.__init__(self, context, 'UpdateSvn')
+        Task.__init__(self, context, self.__class__.__name__)
 
     def _DoTask(self):
         pysvn = PySVN(self.context.svn_path)
@@ -109,7 +109,7 @@ class UpdateSvn(Task):
 
 class MakeLog(Task):
     def __init__(self, context):
-        Task.__init__(self, context, 'MakeLog')
+        Task.__init__(self, context, self.__class__.__name__)
 
     def _DoTask(self):
         logs = []
@@ -131,7 +131,7 @@ class MakeLog(Task):
 
 class PreProc(Task):
     def __init__(self, context):
-        Task.__init__(self, context, 'PreProc')
+        Task.__init__(self, context, self.__class__.__name__)
 
     def _DoTask(self):
         self.context.workspace = config.WORKSPACE
@@ -154,7 +154,7 @@ class PreProc(Task):
 
 class MakeBuildbotEnv(Task):
     def __init__(self, context):
-        Task.__init__(self, context, 'MakeBuildbotEnv')
+        Task.__init__(self, context, self.__class__.__name__)
 
     def _DoTask(self):
         self.context.publish_pack_name = config.VERSION_TAG
@@ -185,7 +185,7 @@ class MakeBuildbotEnv(Task):
 
 class StartKcbp(Task):
     def __init__(self, context):
-        Task.__init__(self, context, 'StartKcbp')
+        Task.__init__(self, context, self.__class__.__name__)
 
     def _DoTask(self):
         req = urllib2.Request(config.KCBP_CONTROL_SERVICE)
