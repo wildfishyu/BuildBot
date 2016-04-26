@@ -5,7 +5,7 @@ set issue_server_ip=172.16.41.114
 set issue_kbcp_dir=\\%issue_server_ip%\d$\KCBP\KCBP\KCBP\bin\
 
 net use \\%issue_server_ip% /del /yes
-net use \\%issue_server_ip% "SZadmin898" /user:administrator
+net use \\%issue_server_ip% "" /user:administrator
 
 copy %_BIN_PACK_DIR%\*.* %issue_kbcp_dir%
 
