@@ -8,7 +8,8 @@ import taskbuilder
 from tasks import *
 
 
-class BuildBotContext:
+# BuildBotContext
+class BuildBotContext(object):
     def __init__(self):
         self.last_rev = 0
         self.cur_rev = 0
@@ -26,7 +27,8 @@ class BuildBotContext:
         self.buildbot_path = ''
 
 
-class BuildBot:
+# BuildBot
+class BuildBot(object):
     def __init__(self):
         self.tasks = []
         self.context = BuildBotContext()
