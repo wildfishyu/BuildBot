@@ -14,7 +14,7 @@ def parse_macro(path, mkv):
     return new_path
 
 
-class Task:
+class Task(object):
     def __init__(self, context, name = 'Task'):
         self.context = context
         self.name = name
@@ -129,6 +129,7 @@ class MakeLog(Task):
         pysvn = PySVN(self.context.svn_path)
         return pysvn.Log(self.context.last_rev, self.context.cur_rev)
 
+
 class PreProc(Task):
     def __init__(self, context):
         Task.__init__(self, context, self.__class__.__name__)
@@ -151,6 +152,7 @@ class PreProc(Task):
         self.context.publish_path = parse_macro(config.PUBLISH_PATH, mkv)
 
         return True
+
 
 class MakeBuildbotEnv(Task):
     def __init__(self, context):
@@ -182,6 +184,7 @@ class MakeBuildbotEnv(Task):
             os.putenv(env_key, env_val)
 
         return True
+
 
 class StartKcbp(Task):
     def __init__(self, context):
