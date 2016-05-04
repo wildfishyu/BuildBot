@@ -1,4 +1,4 @@
-#coding=utf-8
+# coding=utf-8
 
 import sys, os
 from pysvn import PySVN
@@ -7,7 +7,9 @@ import time
 import taskbuilder
 from tasks import *
 
-class BuildBotContext:
+
+# BuildBotContext
+class BuildBotContext(object):
     def __init__(self):
         self.last_rev = 0
         self.cur_rev = 0
@@ -24,7 +26,9 @@ class BuildBotContext:
         self.publish_pack_path = ''
         self.buildbot_path = ''
 
-class BuildBot:
+
+# BuildBot
+class BuildBot(object):
     def __init__(self):
         self.tasks = []
         self.context = BuildBotContext()

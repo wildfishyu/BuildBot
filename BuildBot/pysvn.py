@@ -1,9 +1,9 @@
-#coding=utf-8
+# coding=utf-8
 import os
 import xml2dict
 
 
-class PySVN:
+class PySVN(object):
     def __init__(self, local_path):
         self.local_path = local_path
 

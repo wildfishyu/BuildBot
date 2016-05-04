@@ -1,7 +1,8 @@
-#coding=utf-8
+# coding=utf-8
 from tasks import *
 
-class TaskBuilder:
+
+class TaskBuilder(object):
     def __init__(self, mkvs):
         self.mkvs = mkvs
 
