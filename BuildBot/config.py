@@ -1,7 +1,6 @@
 # coding=utf-8
 
 #
-# WORKSPACE = 'D:\\workset\\Welan\\WLFS_ISSUE\\'
 WORKSPACE = ''
 SVN_PATH = '%WORKSPACE%' + '\\KBSS_WLFS\\'
 
