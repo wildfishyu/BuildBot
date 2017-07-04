@@ -11,7 +11,7 @@ VERSION_TAG = 'KBSS_WLFS_V1.0_SP4'
 
 PUBLISH_PATH = '%WORKSPACE%' + '\\issue\\KBSS_WLFS\\'
 
-KCBP_CONTROL_SERVICE = 'http://172.16.41.114:8001/restartkcbp'
+KCBP_CONTROL_SERVICE = 'http://127.0.0.1:8001/restartkcbp'
 
 # BUILDBOT_FILE`
 BUILDBOT_INFO_FILE = 'buildbot.info'
