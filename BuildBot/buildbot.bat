@@ -1,3 +1,3 @@
-SET _BUILDBOT_WORKSPACE=D:\workset\Welan\WLFS_ISSUE
+SET _BUILDBOT_WORKSPACE=
 python %~dp0buildbot.py
 pause
